@@ -11,7 +11,7 @@ namespace ConsoleApp1
         private static string objectBaseUrl = "https://intra.balco.eu/objects";
         private static string UserName = "";
         private static string Password = "";
-        private static string Domain = "BALCO";
+        private static string Domain = "";
         private static Dictionary<string, string> lookupWeb;
         private static Dictionary<string, string> lookupList;
         private static SPList<ObjectNumber> objects;
@@ -68,6 +68,7 @@ namespace ConsoleApp1
             lookupList = new Dictionary<string, string>();
             lookupWeb.Add("Market", "https://intra.balco.eu");
             lookupList.Add("Market", "Market");
+            lookupWeb.Add("Customer ")
             objects = new SPList<ObjectNumber>(_context, "ObjectNumbers", lookupWeb, lookupList);
             ObjectInfo objInfo = GetObjectHeaders("14111");
             Console.WriteLine(objInfo.Project_x0020_Adress);
