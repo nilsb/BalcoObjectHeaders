@@ -8,7 +8,7 @@ namespace ConsoleApp1
     internal class Program
     {
         private static SPContext _context;
-        private static string objectBaseUrl = "https://intra.balco.eu/objects";
+        private static string objectBaseUrl = "https://my.sp.url/site";
         private static string UserName = "";
         private static string Password = "";
         private static string Domain = "";
@@ -66,7 +66,7 @@ namespace ConsoleApp1
             _context = new SPContext(UserName, Password, Domain, objectBaseUrl);
             lookupWeb = new Dictionary<string, string>();
             lookupList = new Dictionary<string, string>();
-            lookupWeb.Add("Market", "https://intra.balco.eu");
+            lookupWeb.Add("Market", "https://lookup.base.url");
             lookupList.Add("Market", "Market");
             lookupWeb.Add("Customer ")
             objects = new SPList<ObjectNumber>(_context, "ObjectNumbers", lookupWeb, lookupList);
