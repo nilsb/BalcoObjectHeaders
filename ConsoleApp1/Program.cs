@@ -68,7 +68,6 @@ namespace ConsoleApp1
             lookupList = new Dictionary<string, string>();
             lookupWeb.Add("Market", "https://lookup.base.url");
             lookupList.Add("Market", "Market");
-            lookupWeb.Add("Customer ")
             objects = new SPList<ObjectNumber>(_context, "ObjectNumbers", lookupWeb, lookupList);
             ObjectInfo objInfo = GetObjectHeaders("14111");
             Console.WriteLine(objInfo.Project_x0020_Adress);
