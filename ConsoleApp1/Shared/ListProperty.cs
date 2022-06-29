@@ -258,10 +258,10 @@ namespace SPLib.Shared
                 switch (property.PropertyType.Name)
                 {
                     case "SPUser":
-                        SetUserPropertyAsync(list, item, property, d);
+                        await SetUserPropertyAsync(list, item, property, d);
                         break;
                     case "SPMultiUser":
-                        SetUserListPropertyAsync(list, item, property, d);
+                        await SetUserListPropertyAsync(list, item, property, d);
                         break;
                     case "SPLookup":
                         await SetLookupPropertyAsync(list, item, property,d );
